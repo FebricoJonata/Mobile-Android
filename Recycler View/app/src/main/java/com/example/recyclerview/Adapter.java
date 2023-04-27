@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class Adapter extends RecyclerView.Adapter <Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull Adapter.ViewHolder holder, int position) {
         //Set data disini
+        holder.image.setImageResource(itemVector.get(position).getImage());
         holder.nameTxt.setText(itemVector.get(position).getName());
         //Jika tipe datanya integer maka kita perlu type cast int --> string
         // Kita bisa menggunakan String.valueOf() untuk melakukan type casting pada int
@@ -52,12 +54,15 @@ public class Adapter extends RecyclerView.Adapter <Adapter.ViewHolder> {
         TextView nameTxt;
         TextView quantityTxt;
 
+        ImageView image;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             //Get component here
             nameTxt = itemView.findViewById(R.id.nameTxt);
             quantityTxt = itemView.findViewById(R.id.quantityTxt);
+            image = itemView.findViewById(R.id.image_item);
         }
     }
 }

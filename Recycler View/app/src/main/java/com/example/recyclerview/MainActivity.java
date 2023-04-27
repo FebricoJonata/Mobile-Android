@@ -20,23 +20,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Add item dengan menggunakan vector
         Vector<Item> items = new Vector<>();
-        items.add(new Item("Nama Item", 8));
-        items.add(new Item("Nama Item", 4));
-        items.add(new Item("Nama Item", 11));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 3));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 20));
-        items.add(new Item("Nama Item", 5));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 10));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 9));
+        items.add(new Item(R.drawable.person, "Nama Item", 7));
 
 
         //panggil Adapter & context cukup di isi dengan this
