@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".TicketActivity">
 
     <FrameLayout
         android:id="@+id/item_container"
@@ -12,16 +12,13 @@
         android:layout_height="match_parent"
         android:layout_above="@id/bottom_nav">
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/item_rv"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="match_parent"
+            android:text="Ticket"
+            android:gravity="center"
+            android:textSize="40dp"/>
     </FrameLayout>
-    
-
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -29,5 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/bottom_nav" />
+
 
 </RelativeLayout>

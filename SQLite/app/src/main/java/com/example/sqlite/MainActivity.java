@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<News> newsList = new ArrayList<>();
 
-        News data1 = new News(R.drawable.slc, "SLC BINUS YAY", "JAYA JAYA JAYA");
         DB.addData(new News(R.drawable.slc, "SLC BINUS Y Update", "JAYA JAYA JAYAKALI"));
         DB.addData(new News(R.drawable.slc, "SLC BINUS N uppdate 99", "JAYA JAYA JAYA YAKALI"));
 
