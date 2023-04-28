@@ -29,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<News> newsList = new ArrayList<>();
 
-        DB.addData(new News(R.drawable.slc, "SLC BINUS Y Update", "JAYA JAYA JAYAKALI"));
-        DB.addData(new News(R.drawable.slc, "SLC BINUS N uppdate 99", "JAYA JAYA JAYA YAKALI"));
+        DB.addData(new News(R.drawable.slc, "SLC BINUS Y Update 7", "JAYA JAYA JAYAKALI"));
+        DB.addData(new News(R.drawable.slc, "SLC BINUS N uppdate Test", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint,\n"));
 
+        if(newsList.isEmpty()){
+            newsList.addAll(DB.allData());
+        }
 
-        newsList.addAll(DB.allData());
 
         //panggil Adapter & context cukup di isi dengan this
         Adapter adapter = new Adapter(this, newsList);

@@ -69,6 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         if(cursor.moveToFirst()){
+
             do{
                 News data = new News();
                 data.setImage(Integer.parseInt(cursor.getString(0)));
@@ -76,6 +77,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 data.setDescription(cursor.getString(2));
                 newsList.add(data);
             }while (cursor.moveToNext());
+
         }
 
         db.close();
