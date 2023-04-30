@@ -29,8 +29,7 @@
             android:layout_height="wrap_content"
             android:textStyle="normal"
             android:layout_toRightOf="@id/image_item"
-            android:layout_below="@id/nameTxt"
-            />
+            android:layout_below="@id/nameTxt" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
