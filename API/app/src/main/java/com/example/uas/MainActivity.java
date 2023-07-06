@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,7 +45,19 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        getFCMToken();
+    }
 
+    void getFCMToken(){
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+            @Override
+            public void onComplete(@NonNull Task<String> task) {
+                if(task.isSuccessful()){
+                    String token = task.getResult();
+                    Log.i("Token : ", token);
+                }
+            }
+        });
     }
 
     void init(){
