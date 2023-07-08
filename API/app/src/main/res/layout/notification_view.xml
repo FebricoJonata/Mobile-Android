@@ -18,7 +18,9 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginTop="6dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
 
         <TextView
             android:id="@+id/bodyTxt"
@@ -28,7 +30,9 @@
             android:layout_below="@+id/titleTxt"
             android:textColor="@color/black"
             android:layout_marginTop="4dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:maxLines="3"
+            android:ellipsize="end"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
